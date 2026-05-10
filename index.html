@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", sans-serif;
+    background: linear-gradient(135deg, #74ebd5, #9face6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Card chính */
+.card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px 40px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+/* Tiêu đề */
+.title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+/* phụ đề */
+.subtitle {
+    color: #7f8c8d;
+    margin-bottom: 25px;
+}
+
+/* nội dung */
+.weather-box {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #34495e;
+}
+
+/* nhiệt độ */
+.temp {
+    font-size: 50px;
+    font-weight: bold;
+    color: #e67e22;
+    margin: 15px 0;
+}
+
+/* footer */
+.footer {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #95a5a6;
+}
+
+/* hiệu ứng hover */
+.card:hover {
+    transform: translateY(-5px);
+    transition: 0.3s;
+}
+
+/* responsive */
+@media (max-width: 500px) {
+    .card {
+        padding: 20px;
+    }
+
+    .temp {
+        font-size: 40px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+    <div class="title">🌦️ Weather App</div>
+    <div class="subtitle">Theo dõi thời tiết thời gian thực</div>
+
+    <div class="weather-box">📍 Thành phố: <b>{{city}}</b></div>
+    <div class="weather-box">🌤️ Thời tiết: <b>{{desc}}</b></div>
+
+    <div class="temp">{{temp}}°C</div>
+
+    <div class="footer">
+        ⏰ Cập nhật lúc: {{time}}
+    </div>
+</div>
+
+</body>
+</html>
